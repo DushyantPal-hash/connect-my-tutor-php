@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Tutors
+   ========================================================================== */
+
+.tutors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.4rem;
+}
+
+.tutor {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: .35s;
+}
+
+.tutor:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.tutor[hidden],
+#noTutors[hidden] {
+    display: none;
+}
+
+#noTutors {
+    padding: 2rem;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    color: var(--muted);
+}
+
+.tutor-photo {
+    aspect-ratio: 1/1;
+    position: relative;
+    display: grid;
+    place-items: center;
+    font-family: var(--serif);
+    font-size: 3rem;
+    color: var(--paper);
+}
+
+.tutor-photo small {
+    position: absolute;
+    z-index: 1;
+    bottom: .9rem;
+    left: 1rem;
+    background: rgba(28, 26, 23, .72);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: .72rem;
+    padding: .3rem .7rem;
+    border-radius: 999px;
+}
+
+.tutor-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tutor-profile-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+}
+
+.tutor-body {
+    padding: 1.3rem 1.3rem 1.5rem;
+}
+
+.tutor-body h2,
+.tutor-body h3 {
+    font-size: 1.25rem;
+}
+
+.tutor-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+    font-size: .82rem;
+    color: var(--muted);
+}
+
+.rating {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* Tutor gradient backgrounds */
+.t1 {
+    background: linear-gradient(150deg, #7d8a7d, #4d5b4d);
+}
+
+.t2 {
+    background: linear-gradient(150deg, #a9854f, #7c5e33);
+}
+
+.t3 {
+    background: linear-gradient(150deg, #6d7b8a, #43516b);
+}
+
+.t4 {
+    background: linear-gradient(150deg, #96707a, #6b4650);
+}
+
+/* Tutor Search */
+.tutor-search {
+    max-width: 560px;
+    margin: 0 0 2.5rem;
+}
+
+.tutor-search label {
+    display: block;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .45rem;
+}
+
+.tutor-search input {
+    padding: .95rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font: inherit;
+    background: #fff;
+    color: var(--ink);
+    width: 100%;
+}
+
+.tutor-search input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(176, 141, 87, .15);
+}
+
+.tutor-profile-hero>.container {
+    padding-right: 0;
+}
+
+.tutor-profile-heading {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.tutor-profile-heading>img {
+    width: 190px;
+    height: 190px;
+    border: 6px solid rgba(255, 255, 255, .8);
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.tutor-profile-heading h1 {
+    margin: .25rem 0;
+}
+
+.tutor-profile-heading .page-actions {
+    justify-content: flex-start;
+}
+
+.tutor-profile-section {
+    background: #fff;
+}
+
+.tutor-profile-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+    gap: 3rem;
+    align-items: start;
+}
+
+.tutor-profile-layout h3 {
+    margin: 1.8rem 0 .8rem;
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.tutor-profile-layout>div>p {
+    color: var(--muted);
+}
+
+.tutor-course-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+}
+
+.tutor-course-chips a {
+    padding: .45rem .75rem;
+    border: 1px solid #e1eaf2;
+    border-radius: 999px;
+    background: #f4f9fc;
+    color: #536b80;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.tutor-course-chips a:hover {
+    border-color: #c99be8;
+    color: #7434ad;
+}
+
+.tutor-facts {
+    padding: 1.5rem;
+    border: 1px solid #e1eaf2;
+    border-radius: 18px;
+    background: #f6fafe;
+}
+
+.tutor-facts h2 {
+    margin-bottom: 1rem;
+    font-family: var(--sans);
+    font-size: 1.2rem;
+}
+
+.tutor-facts dl {
+    display: grid;
+    gap: 1rem;
+}
+
+.tutor-facts dl>div {
+    display: grid;
+    gap: .2rem;
+}
+
+.tutor-facts dt {
+    color: var(--muted);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.tutor-facts dd {
+    color: var(--ink);
+    font-size: .9rem;
+}
